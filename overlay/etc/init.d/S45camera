@@ -2,7 +2,7 @@
 
 start() {
         printf "Starting camera demo: "
-        /root/demo &
+        /root/demo 192.168.1.7 &
         echo "OK"
 }
 stop() {
