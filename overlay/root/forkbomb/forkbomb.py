@@ -108,6 +108,7 @@ def real_forkbomb():
     os.fork()
 
 def main(stdscr):
+
   curses.curs_set(False)
   curses.init_pair(1, curses.COLOR_RED, curses.COLOR_BLACK)
 
